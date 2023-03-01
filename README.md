@@ -49,15 +49,15 @@ Application consists of 3 backend services (details are below): social-backend, 
 5. Java version
    - Project requires Java 12 but works fine with Java 11.
 7. Database setup
-   To run the main service – social-baskend – you need to run MySQL cluster first. You need to enable the MySQL plugin in Idea and check connection with      the database. You should see 3 MySQL instances.  
+   - To run the main service – social-baskend – you need to run MySQL cluster first. You need to enable the MySQL plugin in Idea and check connection with    the database. You should see 3 MySQL instances.  
 5. Build the backend
-   Build the project using Maven. I use the Maven plugin in Idea, click build-verify-deploy-package. I build from the social-backend directory. After this    you will have a .jar file for social-backend. 
+   - Build the project using Maven. I use the Maven plugin in Idea, click build-verify-deploy-package. I build from the social-backend directory. After        this you will have a .jar file for social-backend. 
 6. Build the frontend
-   Then you need to build social-frontend in the social-frontend directory. Note it will require npm (build manager for javascript, social-frontend written    in Angular) to build. I had trouble with the required npm version and installed nvm from the console in Idea and then obtained the required version of      npm. Then build the frontend from its directory using the “npm build” command in the console of the social-frontend directory in Idea. 
+   - Then you need to build social-frontend in the social-frontend directory. Note it will require npm (build manager for javascript, social-frontend          written in Angular) to build. I had trouble with the required npm version and installed nvm from the console in Idea and then obtained the required        version of npm. Then build the frontend from its directory using the “npm build” command in the console of the social-frontend directory in Idea. 
 7. Run docker compose file in the social-baskend directory
-   All other instructions are in the docker compose file in the social-baskend directory. RabbitMQ will run when you run this docker-compose file. Other      services (Clickhouse and Tarantool) are optional for social-backend and entire application work.
+   - All other instructions are in the docker compose file in the social-baskend directory. RabbitMQ will run when you run this docker-compose file. Other    services (Clickhouse and Tarantool) are optional for social-backend and entire application work.
 8. Run docker compose file in the social-baskend directory to build and run altogether
-   Now you can reach the service on localhost. And experiment with additional two applications to run the entire service and set up auto discovery with        Consul. And also I recommend doing some load testing (scripts are in the testing folder in this repository, you can also check the original repo for        more details).
+   - Now you can reach the service on localhost. And experiment with additional two applications to run the entire service and set up auto discovery with      Consul. And also I recommend doing some load testing (scripts are in the testing folder in this repository, you can also check the original repo for        more details).
    
 # TO DO plan
 
