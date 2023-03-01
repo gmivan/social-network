@@ -43,10 +43,10 @@ Application consists of 3 backend services (details are below): social-backend, 
 # Build and deploy instruction
 
 1. IDE
-   I run the project in Intelij IDEA community edition 2022.3.2.
+   - I run the project in Intelij IDEA community edition 2022.3.2.
 3. Docker and docker compose installation
-   You need to install them if you don't have one yet. See instructions there. Note that docker compose is separate until and needs to be installed after      Docker installation. 
-3. Java version
+    -  You need to install them if you don't have one yet. See instructions there. Note that docker compose is separate until and needs to be installed         after Docker installation. 
+5. Java version
    Project requires Java 12 but works fine with Java 11.
 4. Database setup
    To run the main service – social-baskend – you need to run MySQL cluster first. You need to enable the MySQL plugin in Idea and check connection with      the database. You should see 3 MySQL instances.  
