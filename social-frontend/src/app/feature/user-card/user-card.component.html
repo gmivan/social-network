@@ -1,0 +1,18 @@
+<mat-card class="user-card">
+  <mat-card-header>
+    <div mat-card-avatar class="user-card-header-image">
+      <img src="https://avatarfiles.alphacoders.com/442/44217.jpg" class="img-responsive">
+    </div>
+    <mat-card-title>
+      <a href="/user/{{user.login}}">
+        {{user.firstName}} {{user.lastName}}
+      </a>
+    </mat-card-title>
+    <mat-card-subtitle>{{user.login}}</mat-card-subtitle>
+    <div class="user-action" *ngIf="!user.loggedIn">
+      <button *ngIf="!user.friend" (click)="addFriend(user.id)" mat-button>ADD</button>
+      <label *ngIf="user.friend">FRIEND</label>
+    </div>
+  </mat-card-header>
+</mat-card>
+

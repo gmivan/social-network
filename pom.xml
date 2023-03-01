@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>ru.otus.highload</groupId>
+    <artifactId>otus-highload-social-network</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+    <name>otus-highload-social-network</name>
+    <packaging>pom</packaging>
+
+    <modules>
+        <module>social-backend</module>
+        <module>social-util</module>
+        <module>social-chat</module>
+        <module>social-counter</module>
+
+<!--        <module>social-frontend</module>-->
+    </modules>
+
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+        <java.version>11</java.version>
+        <spring.boot.version>2.2.2.RELEASE</spring.boot.version>
+
+        <grpc.version>1.30.0</grpc.version>
+        <grpc.springboot.version>2.9.0.RELEASE</grpc.springboot.version>
+    </properties>
+
+
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>ru.otus.highload</groupId>
+                <artifactId>social-util</artifactId>
+                <version>0.0.1-SNAPSHOT</version>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+</project>
