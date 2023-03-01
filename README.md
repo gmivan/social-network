@@ -6,7 +6,7 @@ Application consists of 3 backend services (details are below): social-backend, 
 
 # Architecture
 
-![architecture](./files/social-architecture.png)
+![architecture](./social-architecture.png)
 
 # Application consists of 3 backend services
 
