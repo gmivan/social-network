@@ -44,7 +44,7 @@ Application consists of 3 backend services (details are below): social-backend, 
 
 1. IDE
    I run the project in Intelij IDEA community edition 2022.3.2.
-2. Docker and docker compose installation
+3. Docker and docker compose installation
    You need to install them if you don't have one yet. See instructions there. Note that docker compose is separate until and needs to be installed after      Docker installation. 
 3. Java version
    Project requires Java 12 but works fine with Java 11.
