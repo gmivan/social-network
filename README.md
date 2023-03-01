@@ -14,18 +14,18 @@ Application consists of 3 backend services (details are below): social-backend, 
   - replicated MySQL cluster is used as a service database 
     - the service uses semi–synchronous replication - for more
   - users’ data replication to Tarantool in–memory database is used to make search on users fast – [for more](./in-memory-tarantool/hw7-tarantool-replication.md)
-  - the news feed uses PUB/SUB RabbitMQ, updates are stored to the Redis cache - подробнее 
-  - for the analytics purposes data is replicated in ClickHouse online analytical processing engine through the KittenHouse bufferizer (I didn't start         KittenHouse due to troubles with reaching its repo) – read more 
+  - the news feed uses PUB/SUB RabbitMQ, updates are stored to the Redis cache - [for more](./rabbit-redis/hw8-redis-rabbit.md) 
+  - for the analytics purposes data is replicated in ClickHouse online analytical processing engine through the KittenHouse bufferizer (I didn't start         KittenHouse due to troubles with reaching its repo) – [for more](./clickhouse/hw9-clickhouse.md) 
 
 2. Social-chat service
   - the data model is divided into chats and messages to make possible further development to group chats functionality
-  - gRPC is used for service interconnections – read more
+  - gRPC is used for service interconnections – [for more](./grpc-chats/grpc-chats-report.md) 
   - sharded cluster NoSQL database MongoDB of is used for data storage
-  - a detailed description of the work of the service with MongoDB – read more
+  - a detailed [description](./sharding/sharding-report.md) of the work of the service with MongoDB
   - service provides horizontal scaling for the writing using sharding
 
 3. Social-counter service
-  - description of the service описание сервиса
+  - [description](./social-counter/README.md) of the service 
   - the service stores the number of unread messages
   - the service assumes a heavy load on reading
   - uses Redis for data storage
@@ -33,9 +33,9 @@ Application consists of 3 backend services (details are below): social-backend, 
 
 # Additional services
 
-  - all services are wrapped in Docker and use Consul for services auto discovery – подробнее
-  - Prometheus is used for services and infrastructure’s monitoring – подробнее
-  - Nginx access to services for horizontal scaling подробнее
+  - all services are wrapped in Docker and use Consul for services auto discovery – [for more](./consul-docker/hw13-consul.md) 
+  - Prometheus is used for services and infrastructure’s monitoring – [for more](./monitoring/hw15-monitoring.md)
+  - Nginx access to services for horizontal scaling – [for more](./load-balancing/hw11-load-balancing.md)
   - access to MySQL slave replicas through the HAProxy for horizontal scalability of reading load
 
 # Build and deploy instruction
