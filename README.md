@@ -1,7 +1,9 @@
 # Social network application
 
 If you want to practice basics of highload system design and “get hands dirty” then this project is a good billet. You can build, run and modify it using instructions from this repo. 
-The project covers nearly all basic blocks in highload architecture. I copied it from the original repo, which has a detailed description (in Russian) and made some minor fixes to build and run it. Below is a brief description of the architecture with some comments and instructions of how to build and run it. This description is very useful to understand architecture and dependencies to run service.
+
+The project covers nearly all basic blocks in highload architecture. I copied it from the [original repo](https://github.com/alexyakovlev90/otus-highload-social-network), which has a detailed description (in Russian) and made some minor fixes to build and run it. Below is a brief description of the architecture with some comments and instructions of how to build and run it. This description is very useful to understand architecture and dependencies to run service.
+
 Application consists of 3 backend services (details are below): social-backend, social-chat, social-counter. You can run social-backend separately from others. Social-chat and social-counter need social-backend to work. Also I had some troubles in running all services with auto discovery in Consul. As I understand this could occur if you do not deploy MySQL replication fully (MySQL has a master and two slaves, all need to be started for correct work of social-backend service).
 
 # Architecture
